@@ -52,7 +52,7 @@ public partial class SubsystemPartnersContext : DbContext
             entity.HasOne(d => d.IdPartnerNavigation).WithMany(p => p.PartnersProducts)
                 .HasForeignKey(d => d.IdPartner)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("fk_IdPartner");
+                .HasConstraintName("fk_IdPartner"); //
 
             entity.HasOne(d => d.IdProductNavigation).WithMany(p => p.PartnersProducts)
                 .HasForeignKey(d => d.IdProduct)
